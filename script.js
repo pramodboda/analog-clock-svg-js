@@ -1,21 +1,25 @@
-function updateClock() {
-    const now = new Date();
-    const second = now.getSeconds();
-    const minute = now.getMinutes();
-    const hour = now.getHours();
-
-    const secondAngle = second * 6; // 360 degrees / 60 seconds
-    const minuteAngle = minute * 6 + second * 0.1; // 360 degrees / 60 minutes
-    const hourAngle = hour * 30 + minute * 0.5; // 360 degrees / 12 hours
-
-    document.getElementById('second').setAttribute('transform', `rotate(${secondAngle}, 50, 50)`);
-    document.getElementById('minute').setAttribute('transform', `rotate(${minuteAngle}, 50, 50)`);
-    document.getElementById('hour').setAttribute('transform', `rotate(${hourAngle}, 50, 50)`);
+function updateTime() { // Update the SVG clock
+    var now = new Date();
+    var sec = now.getSeconds();
+    var min = now.getMinutes();
+    var hour = (now.getHours() % 12) + min/60;
+    var secangle = sec*6;
+    var minangle = min*6;
+    var hourangle = hour*30;
+    // Get SVG elements for the hands of the clock
+    var sechand = document.getElementById('secondhand');
+    var minhand = document.getElementById("minutehand");
+    var hourhand = document.getElementById("hourhand");
+    // Set an SVG attribute on them to move them around the clock face
+    sechand.setAttribute("transform", "rotate(" + secangle + ",50,50)");
+    minhand.setAttribute("transform", "rotate(" + minangle + ",50,50)");
+    hourhand.setAttribute("transform", "rotate(" + hourangle + ",50,50)");
 
     // Update digital time
     const digitalTime = now.toLocaleTimeString();
     document.getElementById('digital').textContent = digitalTime;
-}
 
-setInterval(updateClock, 1000);
-updateClock(); // Initial call to set the clock immediately
+
+    setTimeout(updateTime, 1000);
+  }
+updateTime();

@@ -1,10 +1,47 @@
-body{
+body {
     font-family: "Plus Jakarta Sans", sans-serif;
-   }
-   #clock {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
+/* These CSS styles all apply to the SVG elements defined below */
+#clock {
+    /* styles for everything in the clock */
+    stroke: black;
+    /* black lines */
+    stroke-linecap: round;
+    /* with rounded ends */
+    fill: #eef;
+    /* on a light blue gray background */
+}
+
+#face {
+    stroke-width: 2px;
+}
+
+/* clock face outline */
+#ticks {
+    stroke-width: 1.5;
+}
+
+/* lines that mark each hour */
+#hourhand {
+    stroke-width: 3px;
+}
+
+/* wide hour hand */
+#minutehand {
+    stroke-width: 2px;
+}
+
+/* narrow minute hand */
+#secondhand {
+    stroke-width: 1px;
+}
+
+#numbers {
+    /* how to draw the numbers */
+    font-family: sans-serif;
+    font-size: 7pt;
+    text-anchor: middle;
+    stroke: none;
+    fill: black;
+}
