@@ -41,6 +41,8 @@ body {
 /* narrow minute hand */
 #secondhand {
     stroke-width: 1px;
+    stroke: #ffb300;
+   
 }
 
 #numbers {
