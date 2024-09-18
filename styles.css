@@ -1,15 +1,16 @@
 body {
     font-family: "Plus Jakarta Sans", sans-serif;
 }
-.clock-container{
+
+.clock-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
 /* These CSS styles all apply to the SVG elements defined below */
 #clock {
-
     /* styles for everything in the clock */
     stroke: black;
     /* black lines */
@@ -42,7 +43,7 @@ body {
 #secondhand {
     stroke-width: 1px;
     stroke: #ffb300;
-   
+
 }
 
 #numbers {
