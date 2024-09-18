@@ -1,0 +1,10 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif;
+   }
+   #clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
