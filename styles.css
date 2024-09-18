@@ -21,7 +21,7 @@ body {
 }
 
 #face {
-    stroke-width: 2px;
+    stroke-width: 1.5px;
 }
 
 /* clock face outline */
@@ -53,4 +53,8 @@ body {
     text-anchor: middle;
     stroke: none;
     fill: black;
+}
+
+#digital{
+    font-weight: 500;
 }
